@@ -7,6 +7,7 @@ import NavBar from "./NavBar";
 import { Route, Switch } from "react-router-dom";
 import Menu from "./Menu";
 import Snack from "./MenuItem";
+import NewItemForm from "./NewItemForm";
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -15,8 +16,8 @@ function App() {
 
     useEffect(() => {
         async function getMenus() {
-            let snacks = await SnackOrBoozeApi.getSnacks();
-            let drinks = await SnackOrBoozeApi.getDrinks();
+            let snacks = await SnackOrBoozeApi.getMenu("snacks");
+            let drinks = await SnackOrBoozeApi.getMenu("drinks");
             setSnacks(snacks);
             setDrinks(drinks);
             setIsLoading(false);
@@ -48,6 +49,14 @@ function App() {
                         </Route>
                         <Route path="/drinks/:id">
                             <Snack items={drinks} cantFind="/drinks" />
+                        </Route>
+                        <Route exact path="/new-item">
+                            <NewItemForm
+                                snacks={snacks}
+                                drinks={drinks}
+                                setSnacks={setSnacks}
+                                setDrinks={setDrinks}
+                            />
                         </Route>
                         <Route>
                             <p>Hmmm. I can't seem to find what you want.</p>

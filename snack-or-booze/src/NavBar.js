@@ -13,6 +13,8 @@ function NavBar({ snacks, drinks }) {
 
                 <Nav className="ml-auto" navbar>
                     <NavItem>
+                        <NavLink to="/new-item">Add your recipe!</NavLink>
+
                         <NavLink to="/snacks">Snacks ({snacks.length})</NavLink>
 
                         <NavLink to="/drinks">Drinks ({drinks.length})</NavLink>

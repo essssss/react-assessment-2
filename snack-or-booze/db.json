@@ -27,6 +27,20 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "id": "asdf",
+      "name": "asdf",
+      "description": "asdf",
+      "recipe": "asdf",
+      "serve": "asdf"
+    },
+    {
+      "id": "poooooh",
+      "name": "lkajdhfg",
+      "description": "kjhdafg",
+      "recipe": "kjhgasd",
+      "serve": "kjhsdfg"
     }
   ],
   "snacks": [
