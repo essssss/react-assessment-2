@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 import "./MenuItem.css";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 function MenuItem({ items, cantFind }) {
     const { id } = useParams();
@@ -25,6 +26,10 @@ function MenuItem({ items, cantFind }) {
                     <p>
                         <b>Serve:</b> {item.serve}
                     </p>
+
+                    <Link to="/" style={{ color: "#22491d" }}>
+                        <p>DELETE ITEM</p>
+                    </Link>
                 </CardBody>
             </Card>
         </section>

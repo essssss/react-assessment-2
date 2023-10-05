@@ -27,6 +27,9 @@ class SnackOrBoozeApi {
             ...data,
         });
     }
+    static async deleteItem(itemId) {
+        await axios.delete(`${BASE_API_URL}/${itemId}`);
+    }
 }
 
 export default SnackOrBoozeApi;

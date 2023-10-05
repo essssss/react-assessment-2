@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SnackOrBoozeApi from "./Api";
 import { Button, Card, CardBody, FormGroup, Input } from "reactstrap";
+import "./NewItemFrom.css";
 //TODO - The drinks/snacks pages and menubars aren't re-rendering.
 
 const NewItemForm = ({ addItem, snacks, setSnacks, drinks, setDrinks }) => {
@@ -32,7 +33,7 @@ const NewItemForm = ({ addItem, snacks, setSnacks, drinks, setDrinks }) => {
     return (
         <Card className="col-md-6">
             <CardBody>
-                <FormGroup>
+                <FormGroup className="NewItemForm-formGroup">
                     <form id="itemForm" onSubmit={handleSubmit}>
                         {/* <label htmlFor="id">Item id:</label> */}
                         <Input

@@ -19,8 +19,8 @@ nav a {
 nav a.active {
     color: #51b045;
     /* font-weight: bold; */
-    border-bottom: 5px dotted;
-    box-sizing: border-box;
+    border-bottom: 1px solid;
+    /* box-sizing: border-box; */
 }
 
 nav a.active:hover {
@@ -34,7 +34,7 @@ nav a:hover {
 }
 
 nav a.active.navbar-brand {
-    color: #440f0d;
+    color: #51b045;
 }
 
 nav a:not(.navbar-brand):hover {
