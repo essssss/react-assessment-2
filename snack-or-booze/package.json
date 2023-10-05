@@ -23,7 +23,8 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "start-fe": "react-scripts start",
-        "start-be": "json-server --watch db.json --delay 500 --port 5000"
+        "start-be": "json-server --watch db.json --delay 500 --port 5000",
+        "debug": "NODE_OPTIONS='--openssl-legacy-provider' next dev -p 5000"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -42,5 +43,8 @@
     },
     "overrides": {
         "react-error-overlay": "6.0.9"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.3.3"
     }
 }

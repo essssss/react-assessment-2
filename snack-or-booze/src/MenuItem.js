@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
+import "./MenuItem.css";
 
 function MenuItem({ items, cantFind }) {
     const { id } = useParams();
@@ -9,8 +10,8 @@ function MenuItem({ items, cantFind }) {
     if (!item) return <Redirect to={cantFind} />;
 
     return (
-        <section>
-            <Card>
+        <section className="col-md-6">
+            <Card className="MenuItem-card">
                 <CardBody>
                     <CardTitle className="font-weight-bold text-center">
                         {item.name}
